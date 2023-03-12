@@ -22,7 +22,7 @@ const MovieCard:FC<itemInfoProp> = ({item}) => {
 
         <CardMedia
           component="img"
-          height="500"
+          height="400"
           image={Poster}
           alt="green iguana"
         />
