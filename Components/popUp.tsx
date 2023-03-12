@@ -134,7 +134,7 @@ const PopUp:FC<PopUpPropsType> = ({ id}) => {
               <div className="img">
                 <CardMedia
                   component="img"
-                  sx={{ mt: 5, width: "195%" }}
+                  sx={{ mt: 5, width: "140px" }}
                   image={movieResult.Poster}
                   alt="green iguana"
                 />
