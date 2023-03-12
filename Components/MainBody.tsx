@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../rdx/Store/store";
 
 const MainBody:FC = () => {
-  const { searchStatus, searchError } = useSelector((state):RootState => state.movie);
-  const searchResult = useSelector((state):RootState => state.movie.searchResult);
+  const { searchStatus, searchError } = useSelector((state:RootState) => state.movie);
+  const searchResult = useSelector((state:RootState) => state.movie.searchResult);
   const dispatch:AppDispatch = useDispatch();
 
   console.log("status:", searchStatus);

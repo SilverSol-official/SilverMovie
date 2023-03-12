@@ -25,7 +25,7 @@ const style1 = {
 };
 
 type PopUpPropsType = {
-  id: PopUpId,
+  id: string,
 }
 
 const PopUp:FC<PopUpPropsType> = ({ id }) => {
@@ -34,8 +34,8 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
   const handleClose = () => setOpen(false);
 
   const dispatch:AppDispatch = useDispatch();
-  const { idStatus, idError }= useSelector((state):RootState => state.id);
-  const movieResult = useSelector((state):RootState => state.id.idResult);
+  const { idStatus, idError }= useSelector((state:RootState) => state.id);
+  const movieResult = useSelector((state:RootState) => state.id.idResult);
   console.log(movieResult);
 
   const statusCheck = () => {

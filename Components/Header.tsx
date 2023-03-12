@@ -12,6 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import { useDispatch } from "react-redux";
 import { fetchSearch } from "../rdx/Features/movie";
+import { AppDispatch } from "../rdx/Store/store";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -57,7 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Header = () => {
   const [search, setSearch] = useState("");
-  const dispatch = useDispatch();
+  const dispatch:AppDispatch = useDispatch();
 
   const inputHandler = (event) => {
     setSearch(event.target.value);
@@ -102,7 +103,7 @@ const Header = () => {
           </Search>
 
           <Button
-            variant="primary"
+            variant="outlined"
             sx={{ marginLeft: "10px" }}
             onClick={() => dispatch(fetchSearch(search))}
           >
