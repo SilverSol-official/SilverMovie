@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 import PopUp from "./popUp";
 import { CardProp } from "../types";
 
@@ -17,15 +16,15 @@ const MovieCard:FC<itemInfoProp> = ({item}) => {
   const { Title, Year, Poster, imdbID } = item;
 
   return (
-    <Card sx={{ maxWidth: 400, height: "100%" }}>
-      <CardActionArea>
+    <Card sx={{ maxWidth: 400,maxHeight:702, height: "100%",cursor:'poiner' }}>
+
         <CardMedia
           component="img"
           height="500"
           image={Poster}
           alt="green iguana"
         />
-        <CardContent>
+        <CardContent sx={{height:'200px'}}>
           <Typography gutterBottom variant="h5" component="div">
             {Title}
           </Typography>
@@ -34,7 +33,7 @@ const MovieCard:FC<itemInfoProp> = ({item}) => {
           </Typography>
           <PopUp id={imdbID} />
         </CardContent>
-      </CardActionArea>
+
     </Card>
   );
 };

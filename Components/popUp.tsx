@@ -84,7 +84,7 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
                 handleClose();
               }}
               value="X"
-              className="btn"
+              className="btn btn-outline"
               style={{ float: "right" }}
             />
 
@@ -134,7 +134,7 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
               <div className="img">
                 <CardMedia
                   component="img"
-                  sx={{ mt: 5, width: "195%" }}
+                  sx={{ mt: 5, width: "150%" }}
                   image={movieResult.Poster}
                   alt="green iguana"
                 />
@@ -156,7 +156,8 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
           dispatch(fetchMovie(id));
         }}
         value="More info"
-        className="btn btn-dark mt-2"
+        
+        className="btn btn-outline-dark mt-2"
       />
     </div>
   );
