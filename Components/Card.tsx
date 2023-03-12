@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import PopUp from "./popUp";
-import { CardProp } from "@/types";
+import { CardProp } from "../types";
 
 type itemInfoProp = {
   item:CardProp,
