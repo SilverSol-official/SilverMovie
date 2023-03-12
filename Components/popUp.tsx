@@ -85,7 +85,7 @@ const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
                 handleClose();
               }}
               value="X"
-              className="btn btn-outline"
+              className="btn"
               style={{ float: "right" }}
             />
 
@@ -135,7 +135,7 @@ const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
               <div className="img">
                 <CardMedia
                   component="img"
-                  sx={{ mt: 5, width: "150%" }}
+                  sx={{ mt: 5, width: "195%" }}
                   image={movieResult.Poster}
                   alt="green iguana"
                 />
@@ -159,7 +159,7 @@ const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
         value="More info"
         
         className="btn btn-outline-dark mt-2"
-      /> */}
+      />
     </div>
   );
 };

@@ -68,9 +68,17 @@ const Header = () => {
     <Box sx={{ flexGrow: 1, width: "86%", margin: "auto", marginTop: "10px" }}>
       <AppBar position="static" color="default">
         <Toolbar>
-            <LocalMoviesIcon sx={{mr:2}}/>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+          >
+            <LocalMoviesIcon />
+          </IconButton>
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}

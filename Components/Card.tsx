@@ -23,7 +23,7 @@ const MovieCard:FC<itemInfoProp> = ({item}) => {
   
   return (
     <Card sx={{ maxWidth: 400,maxHeight:702, height: "100%",cursor:'poiner' }}>
-      <CardActionArea onClick={()=>{setOpen(true);dispatch(fetchMovie(imdbID))}} >
+
         <CardMedia
           component="img"
           height="500"
