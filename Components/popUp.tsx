@@ -26,10 +26,11 @@ const style1 = {
 
 type PopUpPropsType = {
   id: string,
+  openI: boolean,
 }
 
-const PopUp:FC<PopUpPropsType> = ({ id }) => {
-  const [open, setOpen] = React.useState(false);
+const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
+  const [open, setOpen] = React.useState(openI);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -149,7 +150,7 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
   return (
     <div>
       {statusCheck()}
-      <input
+      {/* <input
         type="button"
         onClick={() => {
           handleOpen();
@@ -158,7 +159,7 @@ const PopUp:FC<PopUpPropsType> = ({ id }) => {
         value="More info"
         
         className="btn btn-outline-dark mt-2"
-      />
+      /> */}
     </div>
   );
 };

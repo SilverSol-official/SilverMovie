@@ -7,6 +7,7 @@ export type CardProp = {
 
 export type PopUpId = {
   id: string;
+  open: boolean;
 };
 
 export type MovieID = {
