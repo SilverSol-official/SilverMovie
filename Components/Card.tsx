@@ -4,12 +4,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 import PopUp from "./popUp";
 import { CardProp } from "../types";
-import { AppDispatch } from "../rdx/Store/store";
-import { useDispatch } from "react-redux";
-import { fetchMovie } from "../rdx/Features/id";
+
 
 type itemInfoProp = {
   item:CardProp,
@@ -18,8 +15,7 @@ type itemInfoProp = {
 
 const MovieCard:FC<itemInfoProp> = ({item}) => {
   const { Title, Year, Poster, imdbID } = item;
-  const [open, setOpen] = React.useState(false);
-  const dispatch:AppDispatch = useDispatch();
+
   
   return (
     <Card sx={{ maxWidth: 400,maxHeight:702, height: "100%",cursor:'poiner' }}>
@@ -37,9 +33,9 @@ const MovieCard:FC<itemInfoProp> = ({item}) => {
           <Typography variant="body2" color="text.secondary">
             {Year}
           </Typography>
-          {open? <PopUp id={imdbID} openI={open}/>:''}
+          <PopUp id={imdbID} />
         </CardContent>
-      </CardActionArea>
+
     </Card>
   );
 };

@@ -4,7 +4,6 @@ import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
@@ -68,15 +67,9 @@ const Header = () => {
     <Box sx={{ flexGrow: 1, width: "86%", margin: "auto", marginTop: "10px" }}>
       <AppBar position="static" color="default">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
+         
             <LocalMoviesIcon />
-          </IconButton>
+         
           <Typography
             variant="h6"
             noWrap

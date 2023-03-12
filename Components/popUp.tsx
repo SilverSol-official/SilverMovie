@@ -10,7 +10,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { AppDispatch, RootState } from "../rdx/Store/store";
-import { PopUpId } from "../types";
+  
 
 const style1 = {
   position: "absolute",
@@ -26,11 +26,10 @@ const style1 = {
 
 type PopUpPropsType = {
   id: string,
-  openI: boolean,
 }
 
-const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
-  const [open, setOpen] = React.useState(openI);
+const PopUp:FC<PopUpPropsType> = ({ id}) => {
+  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -150,7 +149,7 @@ const PopUp:FC<PopUpPropsType> = ({ id, openI }) => {
   return (
     <div>
       {statusCheck()}
-      {/* <input
+       <input
         type="button"
         onClick={() => {
           handleOpen();
