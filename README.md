@@ -39,6 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## From Author
 Link to deployed project on vercel servers: https://silver-movie.vercel.app/
+
 In this project was used:
 - React
 - Redux-toolkit
